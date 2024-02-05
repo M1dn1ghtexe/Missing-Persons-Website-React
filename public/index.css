@@ -1,0 +1,243 @@
+*{
+	box-sizing:border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #272624;
+    font-family: "Inter", sans-serif;
+
+}
+.site-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+	background-color: #ffe3c8;
+	max-width: 1700px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 10px;
+
+}
+
+header {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    padding-block: 10px;
+	background-color: blanchedalmond;
+	border-radius: 10px;
+	
+	
+}
+
+header .site-logo {
+    color: black;
+    margin-right: auto;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+header a {
+    text-decoration: none;
+    color: #332828;
+    font-weight: 600;
+    padding: 5px 15px;
+}
+nav{
+	display:flex;
+	padding-right:30px;
+
+}
+
+a {
+    text-decoration: unset;
+    color: unset;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+/*Home*/
+
+
+/*** HOME PAGE ***/
+.home-container {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46));
+	background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 550px;
+    color: rgb(255, 255, 255);
+    padding: 45px 23px;
+}
+.home-container h1 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 42px;
+}
+
+.home-container p {
+    line-height: 24px;
+}
+
+.home-container a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ff8c38;
+    border: none;
+    width: 100%;
+    margin-top: 27px;
+    padding-block: 0.75rem;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+.home-container a:hover {
+    transform: translate(1px, 1px);
+}
+
+
+/*Home*/
+
+/*Footer*/
+
+.footer{
+
+	background-color: #070707;
+	display: flex;
+	font-size: 14px;
+	padding: 25px;
+	flex-direction: row;
+	margin-top: auto;
+	
+	
+	
+	
+
+}
+li {
+	color:white
+}
+
+
+
+/*Footer*/
+
+
+/*About page*/
+
+.about-page-container{
+	
+	max-width: 100%;
+	text-align: center;
+	
+
+}
+
+.about-image{
+	max-width: 60%;
+	max-height: 60%;
+
+}
+.about-page-content h1{
+	line-height: 38px;
+}
+.about-page-content-p{
+	line-height: 22px;
+}
+
+
+
+/* Missing person page */
+
+
+.missingP-list{
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 100px;
+	column-gap: 10px;
+}
+.missingP-tile{
+	width:250px;
+	border-radius: 8px;
+	overflow:hidden;
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+	margin:10px;
+}
+.missingP-tile img{
+	width:100%;
+	height: auto;
+}
+
+.missingP-info{
+
+	padding:10px;
+
+}
+.missingP-info h3{
+	margin-bottom: 8px;
+	font-size: 14px;
+}
+.missingP-info p{
+	line-height: 1.3;
+	font-size: 12px;
+}
+
+
+
+
+
+/** missing person details page */
+
+.missingP-details-container{
+	padding: 30px;
+	padding-inline:27px;
+	
+
+}
+.missingP-details{
+	display:flex;
+	flex-direction: column;
+	text-align: center;
+	
+
+}
+.missingP-details img{
+	border-radius: 5px;
+	margin-block:47px;
+	width: 300px;
+	height: 300px;
+	margin:0 auto;
+	object-fit: cover;
+
+}
+.missingP-details h2{
+	font-size:1.2rem;
+	margin-bottom:10px;
+	
+
+}
+.missingP-details p{
+	padding: 30px;
+	
+	font-size:15px;
+	
+	
+}
+
