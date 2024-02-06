@@ -11,7 +11,7 @@ const MissingPersons = () => {
 		axios('https://api.fbi.gov/wanted/v1/list',{params:{
 
 		
-		'page':4
+		'page':1
 		}})
 		.then((data)=>{
 			console.log(data.data.items);

@@ -13,7 +13,7 @@ html, body {
     display: flex;
     flex-direction: column;
 	background-color: #ffe3c8;
-	max-width: 1700px;
+	max-width: 1600px;
 	margin-top: 20px;
 	margin-right: auto;
 	margin-left: auto;
@@ -72,12 +72,17 @@ body {
 /*** HOME PAGE ***/
 .home-container {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46));
+	
 	background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-height: 550px;
+    min-height: 590px;
+	width:100%;
+	
+	
+	
     color: rgb(255, 255, 255);
     padding: 45px 23px;
 }
@@ -110,6 +115,7 @@ body {
 .home-container a:hover {
     transform: translate(1px, 1px);
 }
+
 
 
 /*Home*/
@@ -225,6 +231,7 @@ li {
 	height: 300px;
 	margin:0 auto;
 	object-fit: cover;
+	box-shadow: 2px 2px 4px rgba(0.2,0.2,0.2,0.2);
 
 }
 .missingP-details h2{
@@ -239,5 +246,28 @@ li {
 	font-size:15px;
 	
 	
+}
+
+.detailsLayout{
+
+	display:flex;
+	margin-bottom:30px;
+	justify-content:center;
+	padding-top: 60px;
+	box-shadow: 2px 2px 4px rgba(0.2,0.2,0.2,0.2);
+	
+	
+}
+.detailsLayout a{
+	text-decoration: none;
+	font-weight: 500;
+	margin-right: 20px;
+	margin-right: 40px;
+	
+}
+.detailsLayout a:hover{
+	text-decoration: underline;
+	font-weight: 600;
+
 }
 

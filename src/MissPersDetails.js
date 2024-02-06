@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import {useParams} from 'react-router-dom'
+import {useParams,useOutletContext} from 'react-router-dom'
 import axios from 'axios'
 
 const MissPersCard = () => {
 
 	const params=useParams()
 	const [mpDetails,setMpDetails]=useState(null)
-
+	const setMissingP=useOutletContext()
+	
+	
 	useEffect(()=>{
 		axios(`https://api.fbi.gov/@wanted-person/${params.id}`)
 		.then((data)=>{
-			
+
+			setMissingP[1](data.data)
 			setMpDetails(data.data)
 
 			
@@ -29,7 +32,8 @@ const MissPersCard = () => {
 		<div className='missingP-details'>
 		<img src={mpDetails.images[0].large}/>
 		<h2>{mpDetails.title}</h2>
-		<p>{mpDetails.details}</p>
+		{mpDetails.details?(<p>{mpDetails.details}</p>): <p>{mpDetails.caution}</p>}
+		
 		</div>
 
 	): <h2>loading</h2>}

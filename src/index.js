@@ -7,6 +7,9 @@ import About from './About'
 import Navbar from './Navbar';
 import MissingPersons from './MissingPersons';
 import MissingPersDetails from './MissPersDetails'
+import MissingDetailsLayout from './MissingDetailsLayout';
+import AdditionalPhotos from './AdditionalPhotos';
+import PhysTraits from './PhysTraits';
 
 
 
@@ -27,9 +30,20 @@ function Comp(){
 		<Routes>
 		 <Route element={<Navbar/>}>
 		<Route path='/' element={<Home/>}/>
-		<Route path='/about' element={<About/>}/>
-		<Route path='/missing' element={<MissingPersons/>}/>
-		<Route path='/missing/:id' element={<MissingPersDetails/>}/>
+		<Route path='about' element={<About/>}/>
+		<Route path='missing' element={<MissingPersons/>}/>
+		<Route path='missing/:id' element={<MissingDetailsLayout/>} >
+		<Route index element={<MissingPersDetails/>}/>
+		<Route path='physicalTraits' element={<PhysTraits/>} />
+		<Route path='additionalPhotos' element={<AdditionalPhotos/>} />
+		
+
+
+
+
+
+
+		</Route>
 		</Route>
 
 		
