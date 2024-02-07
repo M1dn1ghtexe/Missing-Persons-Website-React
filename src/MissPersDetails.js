@@ -13,6 +13,11 @@ const MissPersCard = () => {
 		axios(`https://api.fbi.gov/@wanted-person/${params.id}`)
 		.then((data)=>{
 
+			data.data.details?data.data.details=data.data.details.replaceAll('<p>','').replaceAll('</p>',''):
+			data.data.caution=data.data.caution.replaceAll('<p>','').replaceAll('</p>','')
+
+			
+
 			setMissingP[1](data.data)
 			setMpDetails(data.data)
 

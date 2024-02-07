@@ -28,9 +28,7 @@ const MissingPersons = () => {
 		<img src={el.images[0].large}/>
 		<div className='missingP-info'>
 			<h3>{el.title}</h3>
-			<p>{el.age_range}</p>
-			
-			
+		
 		</div>
 		</Link>
 

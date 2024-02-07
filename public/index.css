@@ -185,25 +185,27 @@ li {
 	overflow:hidden;
 	box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
 	margin:10px;
+	display: flex;
+	flex-direction:column ;
 }
 .missingP-tile img{
 	width:100%;
 	height: auto;
+	
 }
 
 .missingP-info{
-
+	display: flex;
+	flex-direction: column;
+	margin-top: auto;
 	padding:10px;
 
 }
 .missingP-info h3{
-	margin-bottom: 8px;
+	margin-top: auto;
 	font-size: 14px;
 }
-.missingP-info p{
-	line-height: 1.3;
-	font-size: 12px;
-}
+
 
 
 
@@ -221,9 +223,15 @@ li {
 	display:flex;
 	flex-direction: column;
 	text-align: center;
-	
+	justify-content: center;
+	width:70%;
+	margin:0 auto;
 
 }
+.missingP-details p{
+	text-align: left;
+}
+
 .missingP-details img{
 	border-radius: 5px;
 	margin-block:47px;
@@ -271,3 +279,71 @@ li {
 
 }
 
+
+
+.physTraits{
+	display:flex;
+	flex-direction: row;
+	width:80%;
+	justify-content: space-between;
+	align-items:center;
+	flex-wrap: wrap;
+	border-width: 2px;
+	border-style: dotted;
+	border-color: #009879;
+
+}
+
+
+
+
+
+.physTraitsTable{
+
+
+	border-collapse:collapse;
+	margin:25px 0;
+	font-size:0.9em;
+	
+	
+	
+	
+
+}
+.physTraitsTable thead tr{
+	background-color: #009879;
+	color:#ffffff;
+	text-align: left;
+	font-weight: bold;
+}
+.physTraitsTable th,
+.physTraitsTable td{
+	padding:12px 15px;
+
+}
+.physTraitsTable tbody tr{
+	border-bottom:1px solid  rgb(255, 255, 255);
+	background-color: #ffffff;
+
+}
+.physTraitsTable tbody tr:nth-of-type(even){
+	background-color: #d8d8d8;
+
+	
+
+}
+.physTraitsTable tbody tr:hover{
+	background-color: #bbbbbb;
+}
+
+
+
+
+.physTraitsTable tbody tr:last-of-type{
+	border-bottom:2px solid #009879;
+	
+}
+
+.holshit{
+	background-color: red;
+}
