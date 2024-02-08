@@ -25,7 +25,11 @@ const MissingPersons = () => {
 		
 		<div key={el.uid} className='missingP-tile'>
 		<Link to={`/missing/${el.uid}`}>
+	
 		<img src={el.images[0].large}/>
+
+		
+		
 		<div className='missingP-info'>
 			<h3>{el.title}</h3>
 		
