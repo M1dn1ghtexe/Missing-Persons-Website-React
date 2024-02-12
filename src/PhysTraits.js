@@ -1,5 +1,6 @@
 import React from 'react'
 import { useOutletContext,Link } from 'react-router-dom';
+import SubmitTip from './submitTip';
 
 const PhysTraits = () => {
 	const [missingP]=useOutletContext()
@@ -89,7 +90,8 @@ const PhysTraits = () => {
 		{missingP.field_offices?<p>Field Office: {missingP.field_offices[0]}</p>:<p>Field Office: No data found.</p>}
 
 	</div>
-
+	
+    <SubmitTip/>
 	
 
 	</section>

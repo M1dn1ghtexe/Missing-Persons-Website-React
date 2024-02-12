@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {useParams,useOutletContext} from 'react-router-dom'
 import axios from 'axios'
+import SubmitTip from './submitTip'
 
 const MissPersCard = () => {
 
@@ -42,6 +43,8 @@ const MissPersCard = () => {
 		</div>
 
 	): <h2>loading</h2>}
+
+	<SubmitTip/>
 
 
 

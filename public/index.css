@@ -289,6 +289,8 @@ li {
 	margin-top: auto;
 	margin-bottom: auto;
 	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 	width:80%;
 	border-width: 2px;
 	border-style: dotted;
@@ -299,6 +301,7 @@ li {
 	width:20%;	
 	height: 20%;
 	margin:0 auto;
+	padding-bottom: 10px;
 
 }
 
@@ -309,6 +312,11 @@ li {
 	font-size:0.9em;
 	font-weight: bold;
 	font-family: 'Lucida Sans';
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom-color:black;
+	border-bottom-width: 0.5px;
+	border-bottom-style: solid;
 
 }
 
@@ -369,6 +377,8 @@ li {
 	font-size:0.9em;
 	font-weight: bold;
 	font-family: 'Lucida Sans';
+	padding-bottom: 10px;
+	padding-top: 10px;
 
 
 }

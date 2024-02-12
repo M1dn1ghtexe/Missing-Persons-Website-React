@@ -1,5 +1,6 @@
 import React from 'react'
 import { useOutletContext } from 'react-router-dom'
+import SubmitTip from './submitTip'
 
 const AdditionalPhotos = () => {
 	const params=useOutletContext()
@@ -27,6 +28,7 @@ const AdditionalPhotos = () => {
   return (
 	<div className='missingP-list'>
 			{additionalPhotos} 
+			<SubmitTip/>
 		</div>
 	
   )
