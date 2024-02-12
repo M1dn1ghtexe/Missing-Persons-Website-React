@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useOutletContext,Link } from 'react-router-dom';
 import SubmitTip from './submitTip';
 
 const PhysTraits = () => {
 	const missingP=useOutletContext()
+	const [showTable,setShowTable]=useState(false)
+
+	useEffect(()=>{
+
+		var data=missingP[0]
+		if (!data.sex && !data.hair && !data.eyes && !data.eyes_raw && !data.race && !data.weight && !data.aliases) {
+			setShowTable(false)
+		}
+		else{
+			setShowTable(true)
+		}
+
+
+
+
+	},[missingP])
 
 
 
@@ -21,12 +37,7 @@ const PhysTraits = () => {
 	   
 	   <img src={missingP[0].images[0].large}/>
 
-	   
-		
-	
-	
-
-	<table className='physTraitsTable'>
+{showTable?<table className='physTraitsTable'>
 	<thead>
 
 		<tr>
@@ -84,7 +95,8 @@ const PhysTraits = () => {
 
 
 
-	</table>
+	</table>:<p>No traits found on this entry.</p>}
+	
 	<div className='info'>
 	    {missingP[0].publication? <p>Publication:  {missingP[0].publication}</p>:<p>Publication: No data found.</p>}
 	   

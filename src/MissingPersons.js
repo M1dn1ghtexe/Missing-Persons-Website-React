@@ -9,7 +9,7 @@ const MissingPersons = (props) => {
 	const [missingPers,setMissingPers]=useState([])
 	const outletPageArray=props.context
 
-	console.log(outletPageArray);
+	
 
 
 	React.useEffect(()=>{
