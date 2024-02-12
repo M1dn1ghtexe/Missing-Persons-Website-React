@@ -5,8 +5,7 @@ import SubmitTip from './submitTip'
 const AdditionalPhotos = () => {
 	const params=useOutletContext()
 
-	console.log(params);
-
+	
 
 	const additionalPhotos=params[0].images.map((el)=>(
 		

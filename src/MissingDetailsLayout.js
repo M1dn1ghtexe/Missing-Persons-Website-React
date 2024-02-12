@@ -5,6 +5,8 @@ import {Link,Outlet, useParams} from 'react-router-dom'
 const MissingDetailsLayout = () => {
 	const param=useParams()
 	const [missingP,setMissingP]=useState([])
+	const [warningMessage,setWarningMessage]=useState(null)
+
 	
 
 
@@ -21,7 +23,7 @@ const MissingDetailsLayout = () => {
 	 
 
 	</nav>
-	<Outlet context={[missingP,setMissingP]}/>
+	<Outlet context={[missingP,setMissingP,warningMessage,setWarningMessage]}/>
 	
 	
 

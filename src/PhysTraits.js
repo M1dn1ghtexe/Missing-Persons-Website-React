@@ -3,7 +3,8 @@ import { useOutletContext,Link } from 'react-router-dom';
 import SubmitTip from './submitTip';
 
 const PhysTraits = () => {
-	const [missingP]=useOutletContext()
+	const missingP=useOutletContext()
+
 
 
 
@@ -13,10 +14,12 @@ const PhysTraits = () => {
   return (
 
 	<section className='physTraits'>
+	 {missingP[2]?<h1 className='warningMessage'>{missingP[2]}</h1>:null}
+
 
 	
 	   
-	   <img src={missingP.images[0].large}/>
+	   <img src={missingP[0].images[0].large}/>
 
 	   
 		
@@ -34,12 +37,12 @@ const PhysTraits = () => {
 	<tbody>
 		<tr>
 		     <td>Gender</td>
-			 <td>{missingP.sex}</td>
+			 <td>{missingP[0].sex}</td>
 			 </tr>
 			 <tr>
 			 <td>Hair</td>
 			<td>
-			{missingP.hair?missingP.hair:missingP.hair_raw}
+			{missingP[0].hair?missingP[0].hair:missingP[0].hair_raw}
 				
 				
 				
@@ -48,26 +51,26 @@ const PhysTraits = () => {
 			 </tr>
 			<tr>
 			<td>Eyes color</td>
-			<td>{missingP.eyes?missingP.eyes:missingP.eyes_raw}</td>
+			<td>{missingP[0].eyes?missingP[0].eyes:missingP[0].eyes_raw}</td>
 
 			</tr>
 			<tr>
 			<td>Race</td>
-			<td>{missingP.race}</td>
+			<td>{missingP[0].race}</td>
 			</tr>
 			<tr>
 			<td>Weight</td>
-			<td>{missingP.weight}</td>
+			<td>{missingP[0].weight}</td>
 
 			</tr>
 			<tr>
 				<td>Remarks</td>
-				<td>{missingP.remarks?missingP.remarks:<p>No remarks found.</p>}</td>
+				<td>{missingP[0].remarks?missingP[0].remarks:<p>No remarks found.</p>}</td>
 			</tr>
 			<tr>
 			
 			<td>Aliases</td>
-			{missingP.aliases?<td>{missingP.aliases[0]}</td>:<td>No Aliases Found</td>}
+			{missingP[0].aliases?<td>{missingP[0].aliases[0]}</td>:<td>No Aliases Found</td>}
 
 			</tr>
 			

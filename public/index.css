@@ -216,34 +216,45 @@ li {
 
 /** missing person details page */
 
+.warningMessage{
+	font-size: 18px;
+	font-weight: bold;
+	color: red;
+
+}
+
 .missingP-details-container{
-	padding: 30px;
-	padding-inline:27px;
+	margin-top: auto;
+	margin-bottom: auto;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width:80%;
+	border-width: 1px;
+	border-color: #009879;
+	border-style: dashed;
+	
 	
 
 }
-.missingP-details{
-	display:flex;
-	flex-direction: column;
+
+
+
+
+.imgdetails{
+	
 	text-align: center;
-	justify-content: center;
-	width:70%;
-	margin:0 auto;
 
 }
-.missingP-details p{
-	text-align: left;
-}
-
-.missingP-details img{
-	border-radius: 5px;
-	margin-block:47px;
+.imgdetails img{
 	width: 300px;
 	height: 300px;
 	margin:0 auto;
 	object-fit: cover;
 	box-shadow: 2px 2px 4px rgba(0.2,0.2,0.2,0.2);
-
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 2px;
 }
 .missingP-details h2{
 	font-size:1.2rem;
@@ -317,6 +328,10 @@ li {
 	border-bottom-color:black;
 	border-bottom-width: 0.5px;
 	border-bottom-style: solid;
+
+	border-width: 1px;
+	border-color: #070707;
+	border-style: dotted;
 
 }
 
