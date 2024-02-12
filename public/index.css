@@ -183,7 +183,7 @@ li {
 	width:250px;
 	border-radius: 8px;
 	overflow:hidden;
-	box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
 	margin:10px;
 	display: flex;
 	flex-direction:column ;
@@ -285,18 +285,32 @@ li {
 
 
 .physTraits{
-	display:flex;
-	flex-direction: row;
+
+	margin-top: auto;
+	margin-bottom: auto;
+	text-align: center;
 	width:80%;
-	justify-content: space-between;
-	align-items:center;
-	flex-wrap: wrap;
 	border-width: 2px;
 	border-style: dotted;
 	border-color: #009879;
 
 }
+.physTraits img{
+	width:20%;	
+	height: 20%;
+	margin:0 auto;
 
+}
+
+.info{
+	text-align: left;
+	width:80%;
+	margin:0 auto;
+	font-size:0.9em;
+	font-weight: bold;
+	font-family: 'Lucida Sans';
+
+}
 
 
 
@@ -305,8 +319,9 @@ li {
 
 
 	border-collapse:collapse;
-	margin:25px 0;
 	font-size:0.9em;
+	width:80%;
+	margin:0 auto;
 	
 	
 	
@@ -316,7 +331,7 @@ li {
 .physTraitsTable thead tr{
 	background-color: #009879;
 	color:#ffffff;
-	text-align: left;
+	text-align: center;
 	font-weight: bold;
 }
 .physTraitsTable th,
@@ -347,6 +362,13 @@ li {
 	
 }
 
-.holshit{
-	background-color: red;
+.submitTip{
+	text-align: left;
+	width:80%;
+	margin:0 auto;
+	font-size:0.9em;
+	font-weight: bold;
+	font-family: 'Lucida Sans';
+
+
 }

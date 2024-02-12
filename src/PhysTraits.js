@@ -59,6 +59,16 @@ const PhysTraits = () => {
 			<td>{missingP.weight}</td>
 
 			</tr>
+			<tr>
+				<td>Remarks</td>
+				<td>{missingP.remarks?missingP.remarks:<p>No remarks found.</p>}</td>
+			</tr>
+			<tr>
+			
+			<td>Aliases</td>
+			{missingP.aliases?<td>{missingP.aliases[0]}</td>:<td>No Aliases Found</td>}
+
+			</tr>
 			
 		
 			
@@ -71,16 +81,19 @@ const PhysTraits = () => {
 
 
 	</table>
+	<div className='info'>
+	    {missingP.publication? <p>Publication:  {missingP.publication}</p>:<p>Publication: No data found.</p>}
+	   
+		{missingP.modified?	<p>Last Modified:  {missingP.modified}</p>:<p>Last Modified: No modifications has been made.</p>}
 	
+		{missingP.field_offices?<p>Field Office: {missingP.field_offices[0]}</p>:<p>Field Office: No data found.</p>}
 
+	</div>
 
 	
-
-
-
-
 
 	</section>
+	
 	
 	
   )

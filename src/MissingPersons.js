@@ -5,21 +5,29 @@ import axios from 'axios'
 const MissingPersons = () => {
 
 	const [missingPers,setMissingPers]=useState([])
+	const [currentPage,setCurrentPage]=useState(1)
 
 	React.useEffect(()=>{
 
 		axios('https://api.fbi.gov/wanted/v1/list',{params:{
 
 		
-		'page':1
+		'page':currentPage
 		}})
 		.then((data)=>{
 			console.log(data.data.items);
 
 			setMissingPers(data.data.items)
 		})
+		.catch((err)=>{
+			setMissingPers([])
 
-	},[])
+			
+			console.log(err);
+
+		})
+
+	},[currentPage])
 
 	const missingMapped=missingPers.map((el)=>(
 		
@@ -47,9 +55,29 @@ const MissingPersons = () => {
 
   return (
 	
+	<>
 		<div className='missingP-list'>
-			{missingMapped}
+			{missingMapped.length!=0?missingMapped:<p>The FBI open source API can't take more requests for now, please try again in a few minutes.</p>}
+			
+
 		</div>
+		<button onClick={
+			
+			()=>{
+				setCurrentPage((prev)=>prev+1)
+				window.scroll({
+					top:0,
+					behavior:'smooth'
+				})
+				
+				
+				}
+
+
+		}>Next Page</button>
+
+	</>
+	
 	
   )
 }
