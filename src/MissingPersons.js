@@ -1,18 +1,23 @@
-import React, { useState } from 'react'
+import React, {useState ,useEffect} from 'react'
+
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 
-const MissingPersons = () => {
+
+const MissingPersons = (props) => {
 
 	const [missingPers,setMissingPers]=useState([])
-	const [currentPage,setCurrentPage]=useState(1)
+	const outletPageArray=props.context
+
+	console.log(outletPageArray);
+
 
 	React.useEffect(()=>{
 
 		axios('https://api.fbi.gov/wanted/v1/list',{params:{
 
 		
-		'page':currentPage
+		'page':outletPageArray[0]
 		}})
 		.then((data)=>{
 			console.log(data.data.items);
@@ -27,7 +32,7 @@ const MissingPersons = () => {
 
 		})
 
-	},[currentPage])
+	},[outletPageArray[0]])
 
 	const missingMapped=missingPers.map((el)=>(
 		
@@ -64,7 +69,7 @@ const MissingPersons = () => {
 		<button onClick={
 			
 			()=>{
-				setCurrentPage((prev)=>prev+1)
+				outletPageArray[1]((prev)=>prev+1)
 				window.scroll({
 					top:0,
 					behavior:'smooth'

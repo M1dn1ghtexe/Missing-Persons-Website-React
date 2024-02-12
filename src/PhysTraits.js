@@ -86,11 +86,11 @@ const PhysTraits = () => {
 
 	</table>
 	<div className='info'>
-	    {missingP.publication? <p>Publication:  {missingP.publication}</p>:<p>Publication: No data found.</p>}
+	    {missingP[0].publication? <p>Publication:  {missingP[0].publication}</p>:<p>Publication: No data found.</p>}
 	   
-		{missingP.modified?	<p>Last Modified:  {missingP.modified}</p>:<p>Last Modified: No modifications has been made.</p>}
+		{missingP[0].modified?	<p>Last Modified:  {missingP[0].modified}</p>:<p>Last Modified: No modifications has been made.</p>}
 	
-		{missingP.field_offices?<p>Field Office: {missingP.field_offices[0]}</p>:<p>Field Office: No data found.</p>}
+		{missingP[0].field_offices?<p>Field Office: {missingP[0].field_offices[0]}</p>:<p>Field Office: No data found.</p>}
 
 	</div>
 	
